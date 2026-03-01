@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule Tutoring | TeAndrea Burnett Tutoring</title>
+    <meta name="description" content="Book 30-minute or 1-hour tutoring sessions in Troy, AL. View available slots and submit details about your child." />
+    <link rel="canonical" href="https://teandreaburnetttutoring.com/schedule.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">TeAndrea Burnett Tutoring</a>
+        <nav aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="schedule.html" aria-current="page">Schedule</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container stack">
+      <h1>Book a tutoring session</h1>
+      <p>Choose a date, time, duration, and subject focus. The scheduler enforces your booking rules automatically.</p>
+
+      <section class="grid grid-2">
+        <form id="bookingForm" class="card stack">
+          <h2>Parent booking form</h2>
+          <label>Parent Name <input required name="parentName" /></label>
+          <label>Parent Email <input required type="email" name="parentEmail" /></label>
+          <label>Student Name <input required name="studentName" /></label>
+
+          <label>Date <input required type="date" name="date" id="dateField" /></label>
+          <label>Duration
+            <select name="duration" id="durationField" required>
+              <option value="30">30 minutes</option>
+              <option value="60">1 hour</option>
+            </select>
+          </label>
+
+          <fieldset>
+            <legend>Subject selection</legend>
+            <p class="small-note">For 1 hour sessions, you may choose one subject for the full hour or two subjects (30 min each).</p>
+            <label>Primary Subject
+              <select name="subject1" id="subject1" required>
+                <option value="">Select</option>
+                <option>ELA - Phonics & Reading</option>
+                <option>ELA - Writing & Comprehension</option>
+                <option>Math - Number Fluency</option>
+                <option>Math - Word Problems</option>
+                <option>Science</option>
+                <option>Social Studies</option>
+              </select>
+            </label>
+            <label>Secondary Subject (only for 1 hour split sessions)
+              <select name="subject2" id="subject2">
+                <option value="">None</option>
+                <option>ELA - Phonics & Reading</option>
+                <option>ELA - Writing & Comprehension</option>
+                <option>Math - Number Fluency</option>
+                <option>Math - Word Problems</option>
+                <option>Science</option>
+                <option>Social Studies</option>
+              </select>
+            </label>
+          </fieldset>
+
+          <label>Selected Time Slot <input required name="time" id="timeField" readonly placeholder="Pick a slot from the calendar" /></label>
+          <label>Notes for the tutor
+            <textarea
+              name="notes"
+              rows="4"
+              maxlength="1200"
+              placeholder="Share learning style, IEP info, speech concerns, ADHD/medical context, allergies, medications, accommodations, etc."
+            ></textarea>
+          </label>
+
+          <button type="submit" class="btn">Submit Booking</button>
+          <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <section class="card stack">
+          <h2>Availability calendar</h2>
+          <p class="small-note">Each 30-minute slot supports up to 5 students. Full slots are marked unavailable.</p>
+          <div id="slotLegend" class="legend"></div>
+          <div id="timeSlots" class="slot-grid"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p>© <span id="year"></span> TeAndrea Burnett Tutoring</p>
+        <ul>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="schedule.js"></script>
+  </body>
+</html>
