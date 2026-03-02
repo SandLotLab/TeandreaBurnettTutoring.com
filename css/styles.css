@@ -260,7 +260,15 @@ details.card summary { cursor: pointer; font-weight: 700; }
 
 .share-row { display: flex; gap: .75rem; flex-wrap: wrap; }
 
-.btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,.18); }
+.btn-ghost {
+  background: var(--plum-100);
+  border: 1px solid var(--line);
+  color: var(--plum-700);
+}
+
+.btn-ghost:hover {
+  background: #e5d8ff;
+}
 .btn-small { padding: .55rem .85rem; font-size: .95rem; }
 .text-link { font-weight: 600; }
 .link-row { margin-top: .25rem; }
