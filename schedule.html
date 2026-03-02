@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule Tutoring | TeAndrea Burnett Tutoring in Troy, AL</title>
+    <meta name="description" content="Schedule 1-hour tutoring sessions in Troy, Alabama. $25 per student, up to 5 students per hour slot, with parent notes for learning accommodations." />
+    <meta name="keywords" content="tutoring schedule Troy AL, book reading tutor, math tutor schedule" />
+    <link rel="canonical" href="https://teandreaburnetttutoring.com/schedule.html" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+            <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div data-site-header></div>
+    <main class="container stack">
+      <h1>Schedule a one-hour tutoring session</h1>
+      <p>This page is designed for busy parents: pick a date, pick an available hour, submit details, then complete Cash App payment.</p>
+      <p>Session rate is <strong>$25/hour</strong>. Each student can book one hour per day, and each hour can include up to five students.</p>
+
+      <section class="grid grid-2">
+        <form id="bookingForm" class="card stack">
+          <h2>Parent booking form</h2>
+          <label>Parent name <input required name="parentName" /></label>
+          <label>Parent email <input required type="email" name="parentEmail" /></label>
+          <label>Student name <input required name="studentName" /></label>
+          <label>Date <input required type="date" name="date" id="dateField" /></label>
+          <label>Learning focus
+            <select name="subject1" required>
+              <option value="">Select one</option>
+              <option>ELA - Phonics & Reading Fluency</option>
+              <option>ELA - Comprehension & Writing</option>
+              <option>Math - Number Fluency</option>
+              <option>Math - Word Problems</option>
+              <option>Science Support</option>
+              <option>Social Studies Support</option>
+            </select>
+          </label>
+          <label>Notes for tutor
+            <textarea name="notes" rows="4" maxlength="1200" placeholder="Share details that support safe and productive tutoring: medication timing, ADHD, speech needs, IEP context, allergies, physical limitations, etc."></textarea>
+          </label>
+          <label>Selected time <input required name="time" id="timeField" readonly placeholder="Pick an available slot" /></label>
+          <button type="submit" class="btn">Submit booking & go to Cash App</button>
+          <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <section class="card stack">
+          <h2>Live availability</h2>
+          <p class="small-note">Unavailable means that hour is full.</p>
+          <div id="slotLegend" class="legend"></div>
+          <div id="timeSlots" class="slot-grid"></div>
+          <article id="pendingPaymentCard" class="note-box" hidden>
+            <h3>Step 2: Confirm payment</h3>
+            <p id="pendingDetails"></p>
+            <p>After you complete Cash App, click this button to finalize your booking in the scheduler.</p>
+            <button id="markPaidBtn" class="btn" type="button">I sent payment</button>
+          </article>
+        </section>
+      </section>
+    </main>
+    <div data-site-footer></div>
+    <script src="/js/components.js"></script>
+    <script src="/js/schedule.js"></script>
+  </body>
+</html>
