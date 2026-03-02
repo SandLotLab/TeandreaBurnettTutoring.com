@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule Tutoring | TeAndrea Burnett Tutoring</title>
+    <meta name="description" content="Schedule a 1-hour tutoring session in Troy, Alabama. Session cost is $25 with booking confirmed after Cash App payment." />
+    <link rel="canonical" href="https://teandreaburnetttutoring.com/schedule.html" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div data-site-header></div>
+
+    <main class="container stack">
+      <h1>Book a 1-hour tutoring session</h1>
+      <p>Each session is 60 minutes and costs <strong>$25</strong>. A student may only book one session per day.</p>
+
+      <section class="grid grid-2">
+        <form id="bookingForm" class="card stack">
+          <h2>Parent booking form</h2>
+          <label>Parent name <input required name="parentName" /></label>
+          <label>Parent email <input required type="email" name="parentEmail" /></label>
+          <label>Student name <input required name="studentName" /></label>
+          <label>Date <input required type="date" name="date" id="dateField" /></label>
+
+          <label>Primary focus for this hour
+            <select name="subject1" required>
+              <option value="">Select one</option>
+              <option>ELA - Phonics & Reading Fluency</option>
+              <option>ELA - Comprehension & Writing</option>
+              <option>Math - Number Fluency</option>
+              <option>Math - Word Problems</option>
+              <option>Science Support</option>
+              <option>Social Studies Support</option>
+            </select>
+          </label>
+
+          <label>Notes for tutor
+            <textarea name="notes" rows="4" maxlength="1200" placeholder="Share anything helpful: learning goals, IEP context, ADHD/medical info relevant to session safety, speech needs, accommodations, etc."></textarea>
+          </label>
+
+          <label>Selected 1-hour time slot <input required name="time" id="timeField" readonly placeholder="Choose from available slots" /></label>
+          <button type="submit" class="btn">Submit booking & go to Cash App</button>
+          <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <section class="card stack">
+          <h2>Availability</h2>
+          <p class="small-note">Up to 5 students can be booked in each hour.</p>
+          <div id="slotLegend" class="legend"></div>
+          <div id="timeSlots" class="slot-grid"></div>
+
+          <article id="pendingPaymentCard" class="note-box" hidden>
+            <h3>Step 2: Confirm payment</h3>
+            <p id="pendingDetails"></p>
+            <p>After sending payment in Cash App, click below to finalize this booking.</p>
+            <button id="markPaidBtn" class="btn" type="button">I sent payment</button>
+          </article>
+        </section>
+      </section>
+
+      <section class="card stack">
+        <h2>Important</h2>
+        <p>This starter scheduler runs in your browser. For real shared live scheduling with automatic payment verification, connect a secure backend + payment webhook.</p>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+    <script src="/js/components.js"></script>
+    <script src="/js/schedule.js"></script>
+  </body>
+</html>
