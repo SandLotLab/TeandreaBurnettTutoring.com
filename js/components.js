@@ -5,7 +5,6 @@
     { href: '/', label: 'Home' },
     { href: '/schedule.html', label: 'Schedule' },
     { href: '/about.html', label: 'About' },
-    { href: '/contact.html', label: 'Contact' }
   ];
 
   const active = (href) => (href === '/' ? path === '/' || path.endsWith('/index.html') : path.endsWith(href));
