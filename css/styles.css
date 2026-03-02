@@ -266,3 +266,31 @@ details.card summary { cursor: pointer; font-weight: 700; }
 .link-row { margin-top: .25rem; }
 .fineprint { opacity: .85; font-size: .95rem; }
 .muted { opacity: .85; }
+
+
+.home-info-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 1fr);
+  align-items: start;
+}
+
+.session-list {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.btn-ghost-outline {
+  border-color: var(--line);
+  color: var(--plum-700);
+}
+
+.btn-ghost-outline:hover {
+  background: var(--plum-100);
+}
+
+@media (max-width: 900px) {
+  .home-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
