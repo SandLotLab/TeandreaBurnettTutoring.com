@@ -4,7 +4,6 @@
   const links = [
     { href: '/', label: 'Home' },
     { href: '/schedule', label: 'Schedule' },
-    { href: '/about', label: 'About' },
   ];
 
   const active = (href) => (href === '/' ? path === '/' || path.endsWith('/index') : path.endsWith(href));
@@ -38,6 +37,7 @@
             <li><a href="/privacy">Privacy</a></li>
             <li><a href="/refund-policy">Refund Policy</a></li>
             <li><a href="/contact">Contact</a></li>
+			<li><a href="/about">About</a></li>
           </ul>
         </div>
       </footer>`;
