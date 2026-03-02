@@ -18,7 +18,7 @@ const pendingCard = document.getElementById('pendingPaymentCard');
 const pendingDetails = document.getElementById('pendingDetails');
 const paidBtn = document.getElementById('markPaidBtn');
 
-const timeSlots = ['15:00', '16:00', '17:00', '18:00'];
+const timeSlots = ['15:30'];
 
 // Keep local storage behavior for UI/UX, but treat server as truth for availability
 const bookings = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
