@@ -15,7 +15,10 @@
     header.innerHTML = `
       <header class="site-header">
         <div class="container nav-wrap">
-          <a class="brand" href="/">TeAndrea Burnett Tutoring</a>
+          <a class="brand" href="/">
+  <img src="/assets/logo.png" alt="TB Logo" class="brand-logo">
+  <span class="brand-text">TeAndrea Burnett Tutoring</span>
+</a>
           <nav aria-label="Primary navigation">
             <ul class="nav-links">
               ${links.map((l) => `<li><a href="${l.href}" ${active(l.href) ? 'aria-current="page"' : ''}>${l.label}</a></li>`).join('')}
