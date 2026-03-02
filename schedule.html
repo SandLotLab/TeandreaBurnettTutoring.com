@@ -3,107 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Schedule Tutoring | TeAndrea Burnett Tutoring</title>
-    <meta name="description" content="Book 30-minute or 1-hour tutoring sessions in Troy, AL. View available slots and submit details about your child." />
+    <title>Schedule Tutoring | TeAndrea Burnett Tutoring in Troy, AL</title>
+    <meta name="description" content="Schedule 1-hour tutoring sessions in Troy, Alabama. $25 per student, up to 5 students per hour slot, with parent notes for learning accommodations." />
+    <meta name="keywords" content="tutoring schedule Troy AL, book reading tutor, math tutor schedule" />
     <link rel="canonical" href="https://teandreaburnetttutoring.com/schedule.html" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+            <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="index.html">TeAndrea Burnett Tutoring</a>
-        <nav aria-label="Primary">
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="schedule.html" aria-current="page">Schedule</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
+    <div data-site-header></div>
     <main class="container stack">
-      <h1>Book a tutoring session</h1>
-      <p>Choose a date, time, duration, and subject focus. The scheduler enforces your booking rules automatically.</p>
+      <h1>Schedule a one-hour tutoring session</h1>
+      <p>This page is designed for busy parents: pick a date, pick an available hour, submit details, then complete Cash App payment.</p>
+      <p>Session rate is <strong>$25/hour</strong>. Each student can book one hour per day, and each hour can include up to five students.</p>
 
       <section class="grid grid-2">
         <form id="bookingForm" class="card stack">
           <h2>Parent booking form</h2>
-          <label>Parent Name <input required name="parentName" /></label>
-          <label>Parent Email <input required type="email" name="parentEmail" /></label>
-          <label>Student Name <input required name="studentName" /></label>
-
+          <label>Parent name <input required name="parentName" /></label>
+          <label>Parent email <input required type="email" name="parentEmail" /></label>
+          <label>Student name <input required name="studentName" /></label>
           <label>Date <input required type="date" name="date" id="dateField" /></label>
-          <label>Duration
-            <select name="duration" id="durationField" required>
-              <option value="30">30 minutes</option>
-              <option value="60">1 hour</option>
+          <label>Learning focus
+            <select name="subject1" required>
+              <option value="">Select one</option>
+              <option>ELA - Phonics & Reading Fluency</option>
+              <option>ELA - Comprehension & Writing</option>
+              <option>Math - Number Fluency</option>
+              <option>Math - Word Problems</option>
+              <option>Science Support</option>
+              <option>Social Studies Support</option>
             </select>
           </label>
-
-          <fieldset>
-            <legend>Subject selection</legend>
-            <p class="small-note">For 1 hour sessions, you may choose one subject for the full hour or two subjects (30 min each).</p>
-            <label>Primary Subject
-              <select name="subject1" id="subject1" required>
-                <option value="">Select</option>
-                <option>ELA - Phonics & Reading</option>
-                <option>ELA - Writing & Comprehension</option>
-                <option>Math - Number Fluency</option>
-                <option>Math - Word Problems</option>
-                <option>Science</option>
-                <option>Social Studies</option>
-              </select>
-            </label>
-            <label>Secondary Subject (only for 1 hour split sessions)
-              <select name="subject2" id="subject2">
-                <option value="">None</option>
-                <option>ELA - Phonics & Reading</option>
-                <option>ELA - Writing & Comprehension</option>
-                <option>Math - Number Fluency</option>
-                <option>Math - Word Problems</option>
-                <option>Science</option>
-                <option>Social Studies</option>
-              </select>
-            </label>
-          </fieldset>
-
-          <label>Selected Time Slot <input required name="time" id="timeField" readonly placeholder="Pick a slot from the calendar" /></label>
-          <label>Notes for the tutor
-            <textarea
-              name="notes"
-              rows="4"
-              maxlength="1200"
-              placeholder="Share learning style, IEP info, speech concerns, ADHD/medical context, allergies, medications, accommodations, etc."
-            ></textarea>
+          <label>Notes for tutor
+            <textarea name="notes" rows="4" maxlength="1200" placeholder="Share details that support safe and productive tutoring: medication timing, ADHD, speech needs, IEP context, allergies, physical limitations, etc."></textarea>
           </label>
-
-          <button type="submit" class="btn">Submit Booking</button>
+          <label>Selected time <input required name="time" id="timeField" readonly placeholder="Pick an available slot" /></label>
+          <button type="submit" class="btn">Submit booking & go to Cash App</button>
           <p id="formStatus" role="status" aria-live="polite"></p>
         </form>
 
         <section class="card stack">
-          <h2>Availability calendar</h2>
-          <p class="small-note">Each 30-minute slot supports up to 5 students. Full slots are marked unavailable.</p>
+          <h2>Live availability</h2>
+          <p class="small-note">Unavailable means that hour is full.</p>
           <div id="slotLegend" class="legend"></div>
           <div id="timeSlots" class="slot-grid"></div>
+          <article id="pendingPaymentCard" class="note-box" hidden>
+            <h3>Step 2: Confirm payment</h3>
+            <p id="pendingDetails"></p>
+            <p>After you complete Cash App, click this button to finalize your booking in the scheduler.</p>
+            <button id="markPaidBtn" class="btn" type="button">I sent payment</button>
+          </article>
         </section>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <p>© <span id="year"></span> TeAndrea Burnett Tutoring</p>
-        <ul>
-          <li><a href="terms.html">Terms</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </footer>
-
-    <script src="main.js"></script>
-    <script src="schedule.js"></script>
+    <div data-site-footer></div>
+    <script src="/js/components.js"></script>
+    <script src="/js/schedule.js"></script>
   </body>
 </html>

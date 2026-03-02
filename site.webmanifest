@@ -1,0 +1,10 @@
+{
+  "name": "TeAndrea Burnett Tutoring",
+  "short_name": "TB Tutoring",
+  "icons": [
+    {"src":"/assets/favicon.svg","sizes":"any","type":"image/svg+xml"}
+  ],
+  "theme_color": "#6a4c93",
+  "background_color": "#fdf9ff",
+  "display": "standalone"
+}

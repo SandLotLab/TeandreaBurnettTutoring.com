@@ -1,6 +1,6 @@
 # TeAndrea Burnett Tutoring Website
 
-Lightweight static tutoring website focused on local SEO and parent-friendly scheduling rules.
+Teacher-owned static website for local tutoring in Troy, Alabama.
 
 ## Local preview
 
@@ -8,12 +8,21 @@ Lightweight static tutoring website focused on local SEO and parent-friendly sch
 python -m http.server 8080
 ```
 
-Then open `http://localhost:8080`.
+Open `http://localhost:8080`.
+
+## File structure
+
+- `index.html`, `schedule.html`, `about.html`, `contact.html`, `terms.html`, `privacy.html`, `refund-policy.html`
+- `css/styles.css`
+- `js/components.js`, `js/main.js`, `js/schedule.js`
 
 ## Deployment
 
-A GitHub Actions workflow is included at `.github/workflows/deploy.yml` to deploy the static site to GitHub Pages when pushing to `main`.
+GitHub Pages workflow is in `.github/workflows/deploy.yml`.
 
-### Important production recommendation
+## Scheduler and payment note
 
-The booking form currently stores schedule data in browser localStorage as a starter implementation. For real multi-family usage, connect this form to a secure backend calendar/database (for shared availability, audit logs, and privacy-compliant handling of student information).
+Current booking/payment confirmation is a lightweight front-end flow only. For production-grade scheduling and true payment verification, connect:
+1. booking form → backend database/calendar,
+2. Cash App or payment provider webhook → confirmation status,
+3. admin dashboard for schedule management.
