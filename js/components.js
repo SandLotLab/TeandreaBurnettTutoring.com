@@ -3,11 +3,11 @@
   const path = window.location.pathname;
   const links = [
     { href: '/', label: 'Home' },
-    { href: '/schedule.html', label: 'Schedule' },
-    { href: '/about.html', label: 'About' },
+    { href: '/schedule', label: 'Schedule' },
+    { href: '/about', label: 'About' },
   ];
 
-  const active = (href) => (href === '/' ? path === '/' || path.endsWith('/index.html') : path.endsWith(href));
+  const active = (href) => (href === '/' ? path === '/' || path.endsWith('/index') : path.endsWith(href));
 
   const header = document.querySelector('[data-site-header]');
   if (header) {
@@ -34,10 +34,10 @@
         <div class="container footer-grid">
           <p>© ${year} TeAndrea Burnett Tutoring · Troy, Alabama</p>
           <ul>
-            <li><a href="/terms.html">Terms</a></li>
-            <li><a href="/privacy.html">Privacy</a></li>
-            <li><a href="/refund-policy.html">Refund Policy</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/refund-policy">Refund Policy</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
       </footer>`;
