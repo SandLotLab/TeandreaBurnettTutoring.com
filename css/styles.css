@@ -229,3 +229,40 @@ label { display: grid; gap: .25rem; font-weight: 700; }
   .brand-logo { height: 52px; }
   .nav-wrap { padding: .3rem 0; }
 }
+
+/* Add these to /css/styles.css (safe additions) */
+
+.grid-2 { display: grid; gap: 1.25rem; grid-template-columns: 1.25fr 0.85fr; }
+@media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
+
+.pill {
+  display: inline-block;
+  padding: .2rem .55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06);
+  font-weight: 600;
+  font-size: .85rem;
+}
+.dot { opacity: .6; margin: 0 .5rem; }
+.eyebrow { margin: 0; display: flex; align-items: center; gap: .35rem; flex-wrap: wrap; }
+
+.facts, .steps { margin: 0; padding-left: 1.15rem; }
+.divider { height: 1px; background: rgba(255,255,255,.12); margin: .75rem 0; }
+
+.cards-4 { display: grid; gap: 1rem; grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .cards-4 { grid-template-columns: 1fr; } }
+
+.faq-grid { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+@media (max-width: 900px) { .faq-grid { grid-template-columns: 1fr; } }
+details.card { padding: 1rem 1.1rem; }
+details.card summary { cursor: pointer; font-weight: 700; }
+
+.share-row { display: flex; gap: .75rem; flex-wrap: wrap; }
+
+.btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,.18); }
+.btn-small { padding: .55rem .85rem; font-size: .95rem; }
+.text-link { font-weight: 600; }
+.link-row { margin-top: .25rem; }
+.fineprint { opacity: .85; font-size: .95rem; }
+.muted { opacity: .85; }
