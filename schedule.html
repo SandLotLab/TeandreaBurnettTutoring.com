@@ -3,63 +3,130 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Schedule Tutoring | TeAndrea Burnett Tutoring in Troy, AL</title>
-    <meta name="description" content="Schedule 1-hour tutoring sessions in Troy, Alabama. $25 per student, up to 5 students per hour slot, with parent notes for learning accommodations." />
-    <meta name="keywords" content="tutoring schedule Troy AL, book reading tutor, math tutor schedule" />
+    <title>Schedule Tutoring Sessions | TeAndrea Burnett Tutoring in Troy, AL</title>
+    <meta
+      name="description"
+      content="Book tutoring sessions in Troy, AL with TeAndrea Burnett. Easy online scheduling, live availability, and $25 sessions for kindergarten through 3rd grade."
+    />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://teandreaburnetttutoring.com/schedule" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Book Tutoring in Troy, Alabama | TeAndrea Burnett" />
+    <meta
+      property="og:description"
+      content="Choose a date, select an open time, and confirm payment for tutoring Troy AL families trust for early reading and math growth."
+    />
+    <meta property="og:url" content="https://teandreaburnetttutoring.com/schedule" />
+    <meta property="og:site_name" content="TeAndrea Burnett Tutoring" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Schedule Tutoring | TeAndrea Burnett Tutoring" />
+    <meta
+      name="twitter:description"
+      content="Reserve your child's tutoring session in Troy, Alabama with live availability and a simple 3-step booking flow."
+    />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-            <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="/css/styles.css?v=2" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/css/styles.css?v=6" />
   </head>
   <body>
-    <div data-site-header></div>
-    <main class="container stack">
-      <h1>Schedule a one-hour tutoring session</h1>
-      <p>This page is designed for busy parents: pick a date, pick an available hour, submit details, then complete Cash App payment.</p>
-      <p>Session rate is <strong>$25/hour</strong>. Each student can book one hour per day, and each hour can include up to five students.</p>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="/">TeAndrea Burnett Tutoring</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </label>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/schedule" aria-current="page">Schedule</a>
+        </nav>
+      </div>
+    </header>
 
-      <section class="grid grid-2">
-        <form id="bookingForm" class="card stack">
-          <h2>Parent booking form</h2>
-          <label>Parent name <input required name="parentName" /></label>
-          <label>Parent email <input required type="email" name="parentEmail" /></label>
-          <label>Student name <input required name="studentName" /></label>
-          <label>Date <input required type="date" name="date" id="dateField" /></label>
-          <label>Learning focus
-            <select name="subject1" required>
+    <main class="section">
+      <div class="container stack">
+        <h1>Schedule your child's tutoring session</h1>
+        <p>
+          Welcome! This page keeps booking simple for busy families. Choose a date, pick an available time, share your
+          child's learning focus, and then complete Cash App payment.
+        </p>
+        <p>
+          Sessions are <strong>$25 each</strong> in Troy, AL. Each student can book one hour per day, and each hour can
+          include up to five students.
+        </p>
+
+        <section class="grid grid-2">
+          <form id="bookingForm" class="card stack schedule-form">
+            <h2>Step 1: Share your booking details</h2>
+            <p class="small-note">Fill out each field below so TeAndrea can prepare the right support for your child.</p>
+
+            <label for="parentName">Parent name</label>
+            <input id="parentName" required name="parentName" />
+
+            <label for="parentEmail">Parent email</label>
+            <input id="parentEmail" required type="email" name="parentEmail" />
+
+            <label for="studentName">Student name</label>
+            <input id="studentName" required name="studentName" />
+
+            <label for="dateField">Preferred date</label>
+            <input required type="date" name="date" id="dateField" />
+
+            <label for="subject1">Learning focus</label>
+            <select id="subject1" name="subject1" required>
               <option value="">Select one</option>
-              <option>ELA - Phonics & Reading Fluency</option>
-              <option>ELA - Comprehension & Writing</option>
+              <option>ELA - Phonics &amp; Reading Fluency</option>
+              <option>ELA - Comprehension &amp; Writing</option>
               <option>Math - Number Fluency</option>
               <option>Math - Word Problems</option>
               <option>Science Support</option>
               <option>Social Studies Support</option>
             </select>
-          </label>
-          <label>Notes for tutor
-            <textarea name="notes" rows="4" maxlength="1200" placeholder="Share details that support safe and productive tutoring: medication timing, ADHD, speech needs, IEP context, allergies, physical limitations, etc."></textarea>
-          </label>
-          <label>Selected time <input required name="time" id="timeField" readonly placeholder="Pick an available slot" /></label>
-          <button type="submit" class="btn">Submit booking & go to Cash App</button>
-          <p id="formStatus" role="status" aria-live="polite"></p>
-        </form>
 
-        <section class="card stack">
-          <h2>Live availability</h2>
-          <p class="small-note">Unavailable means that hour is full.</p>
-          <div id="slotLegend" class="legend"></div>
-          <div id="timeSlots" class="slot-grid"></div>
-          <article id="pendingPaymentCard" class="note-box" hidden>
-            <h3>Step 2: Confirm payment</h3>
-            <p id="pendingDetails"></p>
-            <p>After you complete Cash App, click this button to finalize your booking in the scheduler.</p>
-            <button id="markPaidBtn" class="btn" type="button">I sent payment</button>
-          </article>
+            <label for="notes">Notes for tutor</label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="4"
+              maxlength="1200"
+              placeholder="Share details that help create a safe, productive session: IEP context, learning accommodations, allergies, or other support needs."
+            ></textarea>
+
+            <label for="timeField">Selected time</label>
+            <input required name="time" id="timeField" readonly placeholder="Pick an available slot" />
+
+            <button type="submit" class="btn">Step 2: Submit booking &amp; go to Cash App</button>
+            <p id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <section class="card stack">
+            <h2>Step 1: Choose an available hour</h2>
+            <p class="small-note">Unavailable means that hour is full.</p>
+            <div id="slotLegend" class="legend"></div>
+            <div id="timeSlots" class="slot-grid"></div>
+            <article id="pendingPaymentCard" class="note-box" hidden>
+              <h3>Step 3: Confirm payment</h3>
+              <p id="pendingDetails"></p>
+              <p>After you complete Cash App, click below to finalize your booking in the scheduler.</p>
+              <button id="markPaidBtn" class="btn" type="button">I sent payment</button>
+            </article>
+          </section>
         </section>
-      </section>
+      </div>
     </main>
-    <div data-site-footer></div>
-    <script src="/js/components.js"></script>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 TeAndrea Burnett Tutoring · Troy, Alabama</p>
+        <nav aria-label="Footer navigation">
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/refund-policy">Refund Policy</a>
+        </nav>
+      </div>
+    </footer>
+
     <script src="/js/schedule.js"></script>
   </body>
 </html>
