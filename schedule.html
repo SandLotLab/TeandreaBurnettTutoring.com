@@ -3,30 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Schedule Tutoring Sessions | TeAndrea Burnett Tutoring in Troy, AL</title>
+    <title>Book a Tutoring Session in Troy, AL | TeAndrea Burnett Tutoring Schedule</title>
     <meta
       name="description"
-      content="Book tutoring sessions in Troy, AL with TeAndrea Burnett. Easy online scheduling, live availability, and $25 sessions for kindergarten through 3rd grade."
+      content="Book tutoring in Troy, AL with live availability, Cash App checkout, and in-person or virtual session formats for kindergarten through 3rd grade students."
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://teandreaburnetttutoring.com/schedule" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Book Tutoring in Troy, Alabama | TeAndrea Burnett" />
+    <meta property="og:title" content="Schedule Tutoring Troy AL Families Can Book Online" />
     <meta
       property="og:description"
-      content="Choose a date, select an open time, and confirm payment for tutoring Troy AL families trust for early reading and math growth."
+      content="Pick a date, share your child's goals, and complete Cash App payment to reserve reading or math tutoring in Troy Alabama."
     />
     <meta property="og:url" content="https://teandreaburnetttutoring.com/schedule" />
     <meta property="og:site_name" content="TeAndrea Burnett Tutoring" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Schedule Tutoring | TeAndrea Burnett Tutoring" />
+    <meta name="twitter:title" content="Schedule | TeAndrea Burnett Tutoring" />
     <meta
       name="twitter:description"
-      content="Reserve your child's tutoring session in Troy, Alabama with live availability and a simple 3-step booking flow."
+      content="Reserve your child’s tutoring spot in Troy, AL with my live calendar, straightforward booking form, and $25 flat-rate session flow."
     />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="/css/styles.css?v=6" />
+    <link rel="stylesheet" href="/css/styles.css?v=7" />
   </head>
   <body>
     <header class="site-header">
@@ -48,18 +48,24 @@
       <div class="container stack">
         <h1>Schedule your child's tutoring session</h1>
         <p>
-          Welcome! This page keeps booking simple for busy families. Choose a date, pick an available time, share your
-          child's learning focus, and then complete Cash App payment.
+          Here's how to grab a spot. Pick your date, tell me about your child, and complete payment. I'll see you soon.
         </p>
         <p>
-          Sessions are <strong>$25 each</strong> in Troy, AL. Each student can book one hour per day, and each hour can
-          include up to five students.
+          I keep my scheduling process simple because parents are busy. My live availability updates throughout the day,
+          and each hour is capped at five students so I can give each learner real attention. Once you submit the form,
+          Cash App opens for the $25 session payment. After payment, click to confirm and your spot is saved. If a time
+          fills before confirmation, the page will tell you immediately and help you pick another option.
+        </p>
+        <p>
+          I serve families looking for tutoring Troy AL students can rely on for consistent early reading intervention,
+          structured phonics work, and math tutor Troy AL support that builds confidence. Please include details that
+          help me teach your child well from day one, including learning preferences, accommodations, or concerns.
         </p>
 
         <section class="grid grid-2">
           <form id="bookingForm" class="card stack schedule-form">
             <h2>Step 1: Share your booking details</h2>
-            <p class="small-note">Fill out each field below so TeAndrea can prepare the right support for your child.</p>
+            <p class="small-note">Fill out each field so I can prepare focused support for your child.</p>
 
             <label for="parentName">Parent name</label>
             <input id="parentName" required name="parentName" />
@@ -67,8 +73,19 @@
             <label for="parentEmail">Parent email</label>
             <input id="parentEmail" required type="email" name="parentEmail" />
 
+            <label for="parentPhone">Parent phone number (optional)</label>
+            <input id="parentPhone" type="tel" name="parentPhone" placeholder="(334) 000-0000" />
+
             <label for="studentName">Student name</label>
             <input id="studentName" required name="studentName" />
+
+            <label for="sessionFormat">How would you like to meet?</label>
+            <select id="sessionFormat" name="sessionFormat" required>
+              <option value="">Select one</option>
+              <option>In-person at Troy Elementary School</option>
+              <option>In-person at Troy, AL Public Library</option>
+              <option>Virtual via Google Meet</option>
+            </select>
 
             <label for="dateField">Preferred date</label>
             <input required type="date" name="date" id="dateField" />
@@ -98,6 +115,10 @@
 
             <button type="submit" class="btn">Step 2: Submit booking &amp; go to Cash App</button>
             <p id="formStatus" role="status" aria-live="polite"></p>
+            <article id="locationConfirmation" class="note-box" hidden>
+              <h3>Your session format details</h3>
+              <p id="locationConfirmationText"></p>
+            </article>
           </form>
 
           <section class="card stack">
@@ -113,6 +134,24 @@
             </article>
           </section>
         </section>
+
+        <section class="section section-alt">
+          <div class="container calendar-wrap stack">
+            <h2>Live calendar view</h2>
+            <p>
+              Use this calendar view to check upcoming availability while you book. I keep this updated so families in
+              Troy, AL can make plans with confidence.
+            </p>
+            <iframe
+              class="calendar-frame"
+              src="https://calendar.google.com/calendar/embed?src=1b610a1c62a67f261a8746258b361d0cb5a8e3d151f8f280c0cb60ded1d2c7aa%40group.calendar.google.com&ctz=America%2FChicago"
+              frameborder="0"
+              scrolling="no"
+              title="TeAndrea Burnett Tutoring live availability calendar"
+              style="border: 0; max-width: 100%; width: 800px; height: 600px"
+            ></iframe>
+          </div>
+        </section>
       </div>
     </main>
 
@@ -123,10 +162,45 @@
           <a href="/privacy">Privacy</a>
           <a href="/terms">Terms</a>
           <a href="/refund-policy">Refund Policy</a>
+          <a href="https://www.youtube.com/@teandreaburnett0910" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
+          <a href="https://wa.me/PHONENUMBER">WhatsApp</a>
         </nav>
       </div>
     </footer>
 
     <script src="/js/schedule.js"></script>
+    <script>
+      (() => {
+        const bookingForm = document.getElementById('bookingForm');
+        const sessionFormatField = document.getElementById('sessionFormat');
+        const statusField = document.getElementById('formStatus');
+        const confirmationBox = document.getElementById('locationConfirmation');
+        const confirmationText = document.getElementById('locationConfirmationText');
+
+        let lastSessionFormat = '';
+
+        bookingForm?.addEventListener('submit', () => {
+          lastSessionFormat = sessionFormatField?.value || '';
+          confirmationBox.hidden = true;
+          confirmationText.textContent = '';
+        });
+
+        const observer = new MutationObserver(() => {
+          if (!statusField || !statusField.textContent.includes('Booking confirmed')) return;
+          if (lastSessionFormat === 'Virtual via Google Meet') {
+            confirmationText.textContent = 'You will receive a Google Meet link before your session.';
+          } else if (lastSessionFormat === 'In-person at Troy Elementary School') {
+            confirmationText.textContent = 'Location: Troy Elementary School, Troy, AL.';
+          } else if (lastSessionFormat === 'In-person at Troy, AL Public Library') {
+            confirmationText.textContent = 'Location: Troy Public Library, Troy, AL.';
+          } else {
+            return;
+          }
+          confirmationBox.hidden = false;
+        });
+
+        if (statusField) observer.observe(statusField, { childList: true, subtree: true, characterData: true });
+      })();
+    </script>
   </body>
 </html>
